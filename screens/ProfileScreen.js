@@ -46,8 +46,8 @@ const ProfileScreen = () => {
             <Title style={[styles.title, {
               marginTop:15,
               marginBottom: 5,
-            }]}>Saleem Khan</Title>
-            <Caption style={styles.caption}>Driver</Caption>
+            }]}>Tehreem Anjum</Title>
+            <Caption style={styles.caption}>Student</Caption>
           </View>
         </View>
       </View>
@@ -56,7 +56,7 @@ const ProfileScreen = () => {
               <Title style={[styles.title,{
               marginLeft: 10,}]}>First name</Title>
               <Caption style={[styles.caption,{
-              marginLeft: 10,}]}>Saleem</Caption>
+              marginLeft: 10,}]}>Tehreem</Caption>
             </View>
             <View>
             <View>
@@ -64,14 +64,14 @@ const ProfileScreen = () => {
               marginLeft: 10,
               marginTop: 20}]}>Last Name</Title>
               <Caption style={[styles.caption,{
-              marginLeft: 10,}]}>Khan</Caption>
+              marginLeft: 10,}]}>Anjum</Caption>
             </View>
             <View>
               <Title style={[styles.title,{
               marginLeft: 10,
               marginTop: 20}]}>Position</Title>
               <Caption style={[styles.caption,{
-              marginLeft: 10,}]}>Driver</Caption>
+              marginLeft: 10,}]}>Student</Caption>
             </View>
               <Title style={[styles.title,{
               marginLeft: 10,
@@ -84,7 +84,21 @@ const ProfileScreen = () => {
               marginLeft: 10,
               marginTop: 20}]}>E-mail</Title>
               <Caption style={[styles.caption,{
-              marginLeft: 10,}]}>saleemkhan@cuilahore.edu.pk</Caption>
+              marginLeft: 10,}]}>SP17-BCS-091@cuilahore.edu.pk</Caption>
+            </View>
+            <View>
+              <Title style={[styles.title,{
+              marginLeft: 10,
+              marginTop: 20}]}>Country</Title>
+              <Caption style={[styles.caption,{
+              marginLeft: 10,}]}>Pakistan</Caption>
+            </View>
+            <View>
+              <Title style={[styles.title,{
+              marginLeft: 10,
+              marginTop: 20}]}>City</Title>
+              <Caption style={[styles.caption,{
+              marginLeft: 10,}]}>Lahore</Caption>
             </View>
     {/*
       <View style={styles.menuWrapper}>

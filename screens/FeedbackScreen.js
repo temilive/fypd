@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, Button, StyleSheet, Card } from 'react-native';
 
-const BookmarkScreen = () => {
+const FeedbackScreen = () => {
     return (
       <View style={styles.container}>
         <Text>My Route</Text>
@@ -13,7 +13,7 @@ const BookmarkScreen = () => {
     );
 };
 
-export default BookmarkScreen;
+export default FeedbackScreen;
 
 const styles = StyleSheet.create({
   container: {

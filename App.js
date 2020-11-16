@@ -3,7 +3,8 @@ import { View, ActivityIndicator } from 'react-native';
 import { 
   NavigationContainer, 
   DefaultTheme as NavigationDefaultTheme,
-  DarkTheme as NavigationDarkTheme
+  DarkTheme as NavigationDarkTheme,
+  StackActions
 } from '@react-navigation/native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 
@@ -13,17 +14,16 @@ import {
   DarkTheme as PaperDarkTheme 
 } from 'react-native-paper';
 
-import { DrawerContent } from './screens/DrawerContent';
-
+import { DrawerContent } from './screens/DrawerContent'; 
 import MainTabScreen from './screens/MainTabScreen';
 import SupportScreen from './screens/SupportScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import BookmarkScreen from './screens/BookmarkScreen';
-
+import FeedbackScreen from './screens/FeedbackScreen';
 import { AuthContext } from './components/context';
-
+import NotificationScreen from './screens/NotificationScreen';
 import RootStackScreen from './screens/RootStackScreen';
-
+import ProfileScreen from './screens/ProfileScreen';
 import AsyncStorage from '@react-native-community/async-storage';
 
 const Drawer = createDrawerNavigator();
@@ -164,7 +164,11 @@ const App = () => {
           <Drawer.Screen name="SupportScreen" component={SupportScreen} />
           <Drawer.Screen name="SettingsScreen" component={SettingsScreen} />
           <Drawer.Screen name="BookmarkScreen" component={BookmarkScreen} />
+          <Drawer.Screen name="FeedbackScreen" component={FeedbackScreen} />
+          <Drawer.Screen name="NotificationScreen" component={NotificationScreen} />
+          <Drawer.Screen name="ProfileScreen" component={ProfileScreen} />
         </Drawer.Navigator>
+        
       )
     :
       <RootStackScreen/>

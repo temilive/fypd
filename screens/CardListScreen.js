@@ -7,11 +7,15 @@ const CardListScreen = ({navigation}) => {
 
     const renderItem = ({item}) => {
         return (
+    
             <Card 
                 itemData={item}
                 onPress={()=> navigation.navigate('CardItemDetails', {itemData: item})}
+                
             />
+            
         );
+        
     };
 
     return (

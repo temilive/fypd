@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {data} from '../model/data';
 import {
   View,
   Text,

@@ -28,47 +28,59 @@ const Tab = createMaterialBottomTabNavigator();
 const MainTabScreen = () => (
   <Tab.Navigator initialRouteName=" Explore" activeColor="#fff">
     <Tab.Screen
-      name="Explore"
-      component={ExploreScreen}
-      options={{
-        tabBarLabel: 'Route',
-        tabBarColor: '#d02860',
-        tabBarIcon: ({color}) => (
-          <Icon name="ios-aperture" color={color} size={26} />
-        ),
-      }}
-    />
-    <Tab.Screen
       name="Home"
       component={HomeStackScreen}
       options={{
         tabBarLabel: 'Home',
-        tabBarColor: '#FF6347',
+        tabBarColor: '#0000FF',
         tabBarIcon: ({color}) => (
           <Icon name="ios-home" color={color} size={26} />
         ),
       }}
     />
+   
+    <Tab.Screen
+      name="Explore"
+      component={ExploreScreen}
+      options={{
+        tabBarLabel: 'Route',
+        tabBarColor: '#008080',
+        tabBarIcon: ({color}) => (
+          <Icon name="ios-aperture" color={color} size={26} />
+        ),
+      }}
+    />
+   
     
      <Tab.Screen
       name="Notifications"
       component={NotificationStackScreen}
       options={{
         tabBarLabel: 'Updates',
-        tabBarColor: '#1f65ff',
+        tabBarColor: '#00FFFF',
         tabBarIcon: ({color}) => (
           <Icon name="ios-notifications" color={color} size={26} />
         ),
       }}
     />
-    
+   <Tab.Screen
+      name="Feedbacks"
+      component={FeedbackStackScreen}
+      options={{
+        tabBarLabel: 'Feedback',
+        tabBarColor: '#008000',
+        tabBarIcon: ({color}) => (
+          <Icon name="ios-happy" color={color} size={26} />
+        ),
+      }}
+    /> 
    
     <Tab.Screen
       name="Profile"
       component={ProfileStackScreen}
       options={{
         tabBarLabel: 'Profile',
-        tabBarColor: '#694fad',
+        tabBarColor: '#0000FF',
         tabBarIcon: ({color}) => (
           <Icon name="ios-person" color={color} size={26} />
         ),
@@ -159,7 +171,33 @@ const HomeStackScreen = ({navigation}) => {
     </HomeStack.Navigator>
   );
 };
-
+const FeedbackStackScreen = ({navigation}) => (
+  <FeedbackStack.Navigator
+    screenOptions={{
+      headerStyle: {
+        backgroundColor: '#1f65ff',
+      },
+      headerTintColor: '#fff',
+      headerTitleStyle: {
+        fontWeight: 'bold',
+      },
+    }}>
+    <FeedbackStack.Screen
+      name="Feedbacks"
+      component={FeedbackScreen}
+      options={{
+        headerLeft: () => (
+          <Icon.Button
+            name="ios-menu"
+            size={25}
+            backgroundColor="#1f65ff"
+            onPress={() => navigation.openDrawer()}
+          />
+        ),
+      }}
+    />
+  </FeedbackStack.Navigator>
+);
 const NotificationStackScreen = ({navigation}) => (
   <NotificationStack.Navigator
     screenOptions={{

@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text, Image, StyleSheet, TouchableOpacity} from 'react-native';
+import { Button } from 'react-native-paper';
 
 import StarRating from './StarRating';
 
@@ -18,6 +19,9 @@ const Card = ({itemData, onPress}) => {
           <Text style={styles.cardTitle}>{itemData.title}</Text>
           <StarRating ratings={itemData.ratings} reviews={itemData.reviews} />
           <Text numberOfLines={2} style={styles.cardDetails}>{itemData.description}</Text>
+        </View>
+        <View>
+          <Button>Book Now</Button>
         </View>
       </View>
     </TouchableOpacity>

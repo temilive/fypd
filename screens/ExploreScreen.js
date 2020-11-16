@@ -188,7 +188,7 @@ const ExploreScreen = () => {
           </TouchableOpacity>
         ))}
       </ScrollView>
-      <Animated.ScrollView
+      {/*<Animated.ScrollView
         ref={_scrollView}
         horizontal
         pagingEnabled
@@ -246,7 +246,7 @@ const ExploreScreen = () => {
             </View>
           </View>
         ))}
-      </Animated.ScrollView>
+                </Animated.ScrollView>*/}
     </View>
   );
 };

@@ -9,13 +9,11 @@ import {
   ScrollView,
 } from 'react-native';
 import {useTheme} from '@react-navigation/native';
-
 import Swiper from 'react-native-swiper';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
-import Fontisto from 'react-native-vector-icons/Fontisto';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import StarRating from '../components/StarRating';
+
 
 const HomeScreen = ({navigation}) => {
   const theme = useTheme();
@@ -53,60 +51,67 @@ const HomeScreen = ({navigation}) => {
         </Swiper>
       </View>
 
-      {/*<View style={styles.categoryContainer}>
+      <View style={styles.categoryContainer}>
         <TouchableOpacity
           style={styles.categoryBtn}
           onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Restaurant'})
+            navigation.navigate('CardListScreen', {title: 'Routes'})
           }>
           <View style={styles.categoryIcon}>
-            <Ionicons name="ios-restaurant" size={35} color="#FF6347" />
+            <Ionicons name="ios-bus" size={35} color="#0000FF" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Restaurant</Text>
+          <Text style={styles.categoryBtnTxt}>Book a Ride</Text>
         </TouchableOpacity>
+
         <TouchableOpacity
-          style={styles.categoryBtn}
+          
           onPress={() =>
-            navigation.navigate('CardListScreen', {title: 'Fastfood Center'})
+            navigation.navigate('CardListScreen', {title: 'Routes'})
           }>
           <View style={styles.categoryIcon}>
             <MaterialCommunityIcons
-              name="food-fork-drink"
+              name="road"
               size={35}
-              color="#FF6347"
+              color="#0000FF"
             />
           </View>
-          <Text style={styles.categoryBtnTxt}>Fastfood Center</Text>
-        </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+          <Text style={styles.categoryBtnTxt}>Routes</Text>
+        </TouchableOpacity >
+
+        <TouchableOpacity  style={styles.categoryBtn}
+          onPress={() =>
+            navigation.navigate('NotificationScreen', {title: 'Notification'})
+          }>
           <View style={styles.categoryIcon}>
-            <MaterialCommunityIcons name="food" size={35} color="#FF6347" />
+            <MaterialCommunityIcons name="bell" size={35} color="#0000FF" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Snacks Corner</Text>
+          <Text style={styles.categoryBtnTxt}>Notification</Text>
         </TouchableOpacity>
       </View>
       <View style={[styles.categoryContainer, {marginTop: 10}]}>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.categoryBtn} onPress={() =>
+          navigation.navigate('ProfileScreen', {title: 'Profile'}) }>
           <View style={styles.categoryIcon}>
-            <Fontisto name="hotel" size={35} color="#FF6347" />
+          <MaterialIcons name="person" size={35} color="#0000FF" />
+            
           </View>
-          <Text style={styles.categoryBtnTxt}>Hotels</Text>
+          <Text style={styles.categoryBtnTxt}>Profile</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.categoryBtn} onPress={() => navigation.navigate('BookmarkScreen', {title: 'My Route'})}>
           <View style={styles.categoryIcon}>
-            <Ionicons name="md-restaurant" size={35} color="#FF6347" />
+            <Ionicons name="ios-bookmark" size={35} color="#0000FF" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Dineouts</Text>
+          <Text style={styles.categoryBtnTxt}>BookMark</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.categoryBtn} onPress={() => {}}>
+        <TouchableOpacity style={styles.categoryBtn} onPress={() => navigation.navigate('FeedbackScreen', {title: 'Give Feedback'})}>
           <View style={styles.categoryIcon}>
-            <MaterialIcons name="expand-more" size={35} color="#FF6347" />
+            <MaterialIcons name="feedback" size={35} color="#0000FF" />
           </View>
-          <Text style={styles.categoryBtnTxt}>Show More</Text>
+          <Text style={styles.categoryBtnTxt}>Feedback</Text>
         </TouchableOpacity>
       </View>
-        */}
-      <View style={styles.cardsWrapper}>
+        
+     {/* <View style={styles.cardsWrapper}>
         <Text
           style={{
             alignSelf: 'center',
@@ -164,11 +169,13 @@ const HomeScreen = ({navigation}) => {
             </Text>
           </View>
         </View>
-      </View>
+      </View>*/}
     </ScrollView>
   );
 };
-
+const NotificationScreen = ()=>{
+  <Text>Hello</Text>
+}
 export default HomeScreen;
 
 const styles = StyleSheet.create({
@@ -224,7 +231,7 @@ const styles = StyleSheet.create({
   categoryBtnTxt: {
     alignSelf: 'center',
     marginTop: 5,
-    color: '#de4f35',
+    color: '#0000FF',
   },
   cardsWrapper: {
     marginTop: 20,

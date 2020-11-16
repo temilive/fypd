@@ -39,8 +39,8 @@ export function DrawerContent(props) {
                                 size={50}
                             />
                             <View style={{marginLeft:15, flexDirection:'column'}}>
-                                <Title style={styles.title}>Saleem Khan</Title>
-                                <Caption style={styles.caption}>Driver</Caption>
+                                <Title style={styles.title}>Tehreem Anjum</Title>
+                                <Caption style={styles.caption}>Student</Caption>
                             </View>
                         </View>
 
@@ -73,7 +73,7 @@ export function DrawerContent(props) {
                             icon={({color, size}) => (
                                 <Icon 
                                 name="bookmark-outline" 
-                                color={color}
+                                 color={color}
                                 size={size}
                                 />
                             )}
@@ -101,6 +101,17 @@ export function DrawerContent(props) {
                             )}
                             label="Support"
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
+                        />
+                        <DrawerItem 
+                            icon={({color, size}) => (
+                                <Icon 
+                                name="smile-outline" 
+                                color={color}
+                                size={size}
+                                />
+                            )}
+                            label="Feedback"
+                            onPress={() => {props.navigation.navigate('FeedbackScreen')}}
                         />
                     </Drawer.Section>
                     <Drawer.Section title="Preferences">

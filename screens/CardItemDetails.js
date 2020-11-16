@@ -6,6 +6,9 @@ import {
   StyleSheet,
   Dimensions,
   StatusBar,
+  Button,
+  navigate,
+  Alert,
   Platform,
 } from 'react-native';
 import HeaderImageScrollView, {
@@ -49,16 +52,37 @@ const CardItemDetails = ({route}) => {
           onHide={() => navTitleView.current.fadeInUp(200)}
           onDisplay={() => navTitleView.current.fadeOut(100)}>
           <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
-            <Text style={styles.title}>Overview</Text>
+            <Text style={styles.title}>Details</Text>
             <View style={{flexDirection: 'row', alignItems: 'flex-end'}}>
               <FontAwesome name="star" size={16} color="#FF6347" />
               <Text style={{marginHorizontal: 2}}>{itemData.rating}</Text>
               <Text>({itemData.reviews})</Text>
+             
             </View>
           </View>
+        
         </TriggeringView>
         <View style={[styles.section, styles.sectionLarge]}>
           <Text style={styles.sectionContent}>{itemData.description}</Text>
+        </View>
+        <View>
+        <Text>{itemData.Route}</Text>
+        <Button
+        title="Shahdra"
+        onPress={()=>Alert.alert('Route Selected')}
+        ></Button>
+        <Button
+        title="Bund Road"></Button>
+        <Button
+        title="Gulshan-e-Ravi"></Button>
+        <Button
+        title="Motorway"></Button>
+        <Button
+        title="Ali Raza Abad"></Button>
+        <Button
+        title="LDA"></Button>
+        <Button
+        title="COMSATS"></Button>
         </View>
 
         <View style={styles.section}>
@@ -112,7 +136,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
   },
   section: {
-    padding: 20,
+    padding: 10,
     borderBottomWidth: 1,
     borderBottomColor: '#cccccc',
     backgroundColor: 'white',
@@ -168,6 +192,6 @@ const styles = StyleSheet.create({
     backgroundColor: 'transparent',
   },
   sectionLarge: {
-    minHeight: 300,
+    minHeight: 100,
   },
 });

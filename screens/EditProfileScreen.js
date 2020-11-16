@@ -135,7 +135,7 @@ const EditProfileScreen = () => {
             </View>
           </TouchableOpacity>
           <Text style={{marginTop: 10, fontSize: 18, fontWeight: 'bold'}}>
-                    Saleem Khan
+                    Tehreem Anjum
           </Text>
         </View>
 
